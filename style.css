@@ -1,0 +1,292 @@
+* {
+  color: #eeeeee;
+}
+
+html {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilo do menu lateral */
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: -101%;
+  width: 25%;
+  height: 100%;
+  background-color: #37005d;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border-right:solid #9f00ff70 2px;
+}
+
+/* Links do menu */
+.menu-lateral a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: solid #9f00ff70 2px;
+  transition: all 0.1s ease;
+}
+
+.menu-lateral a:hover {
+  background-color: #9c41da70;
+}
+
+.botao-notificacao {
+  border-radius: 10%;
+  font-size: 30px;
+  background: none;
+  /* padding: 10px 15px; */
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  /* height: 4%; */
+  transition: all 0.1s ease-in-out;
+  padding: 0;
+  filter: invert(1);
+}
+
+.notificacao-img {
+  height: 45px;
+}
+
+#top-links {
+  margin: 11vh 0 0 0;
+}
+
+#bottom-links {
+  border-bottom: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Estilo para o botão */
+.botao-menu {
+  border-radius: 10%;
+  font-size: 30px;
+  background: none;
+  color: white;
+  padding: 10px 15px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;  /* Garante que o botão fique sempre acima do menu */
+  transition: all 0.1s ease-in-out;
+}
+
+.botao-menu:hover {
+  background-color: #ffffff2a;
+}
+
+/* Estilo para o conteúdo principal */
+.conteudo {
+  padding: 4%;
+  transition: width 0.3s ease;  /* Suaviza a transição da largura */
+  width: 100%;  /* Largura padrão do conteúdo */
+  text-align: center;
+  justify-items: center;
+  margin-bottom: 11.8%;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#fake-footer {
+  background-color: #6a30ac;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  border-top: ridge #9b3ed4 4px;
+}
+
+footer {
+  background-color: #00000000;
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #37005d;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  border: solid #9f00ff70 4px;
+  transition: all 0.1s ease-in;
+}
+
+.footer-links:hover {
+  background-color: #7313ac;
+}
+
+.footer-links svg {
+  width: 60%;
+  opacity: 0.8;
+  filter: invert(1);
+}
+
+.img-footer-links {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-lateral {
+    display: block;
+    color: white;
+    padding: 0;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #ececff;
+    transition: all 0.2s ease;
+    width: 100vw;
+    left: -101%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .menu-lateral a {
+    padding: 25px;
+  }
+  .menu-lateral a:hover {
+    background-color: #00000000;
+  }
+
+  .botao-menu:hover {
+    background-color: #00000000;
+  }
+
+  .conteudo {
+    margin-top: 6vh;
+    padding: 5%;
+  }
+
+  #fake-footer {
+    background-color: #6a30ac;
+    width: 100%;
+    height: 6%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer {
+    background-color: #00000000;
+    width: 100%;
+    height: 11.8%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footer-links {
+    border-radius: 100%;
+    width: 60px;
+    height: 61px;
+    border: solid #9f00ff70 2px;
+  }
+
+  .footer-links:hover {
+    background-color: #37005d;
+  }
+  
+  .img-footer-links {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+
+}
+
+@media screen and (orientation: landscape) {
+  #top-links {
+    margin-top: 14vh;
+  }
+
+  #conteudo {
+    margin: 2vh 0 1vh 0;
+    margin-right: 12vw;
+  }
+
+  .footer-links {
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    border: solid #9f00ff70 2px;
+  }
+
+  #fake-footer {
+    right: 0;
+    height: 100vh;
+    width: 6vw;
+    border-left: ridge #9b3ed4 4px;
+  }
+
+  footer {
+    background-color: #00000000;
+    width: 12vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .botao-notificacao {
+     margin-right: 12vw;
+  }
+}
